@@ -34,5 +34,13 @@
 	<script src="js/v2/master-loader.js"></script>
 	<script src="js/analytics_ubg_v1_4.js"></script>
   <script src="js/ubg235_client_v1_1.js"></script>
+	<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('sw.js').then(() => {
+      console.log('SW registered!');
+    }).catch(err => console.error('SW failed:', err));
+  }
+</script>
+
 </body>
 </html>
